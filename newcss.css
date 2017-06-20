@@ -1,0 +1,169 @@
+html{
+    margin: 0px;
+    width: 100%;
+}   
+body{
+    margin: 0px;
+    width: 100%;
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #DDEFBB, #FFEEEE) no-repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 0;
+}
+header{
+    text-align: center;
+    height: 200px;
+}
+header div{
+    height: 100px;
+    width: 100%;
+    background: url('http://www.pngall.com/wp-content/uploads/2016/06/Pokemon-PNG-Pic.png') center center no-repeat;
+    background-size: contain;
+    margin: 10px auto;
+}
+h1{
+    margin: 50px auto;
+    display: block;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+.window{
+    width: 485px;
+    height: 415px;
+    border: 5px solid transparent;
+    overflow: hidden;
+    margin: 20px auto;
+    z-index: 1;
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #BBCE97, #E1C9C9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+table{
+    margin: 0px auto;
+    z-index: 0;
+    top: 50px;
+    margin-left: 0px;
+    table-layout: fixed;
+    column-width: 170px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+th, td{
+    padding: 30px;
+    text-align: center;
+   
+}
+
+table td + td { 
+    border-left: 0.5px solid #BDD78B; 
+}
+table th + th { 
+    border-left: 0.5px solid; 
+    border-left-color: #BDD78B;
+}
+.pokemon_name{
+    text-align: center;
+    margin: 20px;
+}
+.pokemon_hp{
+    font-size: 20px;
+}
+.pokemon_type{
+    font-size: 15px;
+}
+.pagination{
+    margin: 50px auto;
+    text-align: center;
+}
+input{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+img{
+    transition: transform .8s ease-in-out;
+}
+img:hover{
+    transform: rotate(360deg);
+}
+.page{
+    display: none;
+    margin: 50px auto;
+    text-align: center;
+    width: 1000px;
+    overflow: auto;
+}
+.poke_name{
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    margin: 20px;
+}
+.poke_info{
+    float: right;
+    display: inline-block;
+    width: 750px;
+    text-align: left;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 12%, rgba(189,215,139,1) 100%); 
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.poke_info span{
+    margin: 30px 30px;
+    font-size: 20px;
+    line-height: 34px;
+    font-family: 'Raleway', sans-serif;
+}
+#description{
+    text-justify: inter-word;
+    text-align: center;
+}
+.poke_photo{
+    float: left;
+    width: 150px;
+    height: 200px;
+    margin: 20px;
+    
+}
+.poke_photo img{
+    height: 100%;
+    align-content: center;
+}
+footer{
+    border-bottom: solid 1px gray;
+    border-top: solid 1px gray;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #F5F5F5;
+    z-index: 1;
+}
+footer p{
+    font-family: 'Raleway', sans-serif;
+    color: darkgrey;
+    margin: 20px 20px 20px 40px;
+    word-spacing: 2px;
+    font-size: 10px;
+    display: inline-block;
+}
+footer span{
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+    margin: 20px 40px 20px 20px;
+    word-spacing: 2px;
+    font-size: 10px;
+    float: right;
+    display: inline-block;
+}
