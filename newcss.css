@@ -27,6 +27,15 @@ h1{
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
 }
+#searchPokeContainer{
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+}
+#pokeSearch{
+    width: 100px;
+    height: 30px;
+}
 .window{
     width: 485px;
     height: 415px;
@@ -102,6 +111,39 @@ img:hover{
     text-align: center;
     width: 1000px;
     overflow: auto;
+    position: relative;
+}
+@media screen and (max-width: 1000px){
+    .page{
+        width: 95vw;
+        padding-right: 0px;
+        overflow-x: hidden;
+        margin-right: 0px;
+        height: 100%;
+    }
+    .page .poke_info{
+        width: 95vw;
+        position: absolute;
+        left: 0vw;
+        overflow: visible;
+    }
+    #hp{
+        margin-left: 25vw;
+    }
+    #type{
+        margin-left: 25vw;
+    }
+    #speed{
+        margin-left: 25vw;
+        
+    }
+    #attack{
+        margin: 0px;
+    }
+    #defence{
+        margin: 0px;
+    }
+    
 }
 .poke_name{
     text-transform: capitalize;
@@ -121,6 +163,12 @@ img:hover{
     padding: 20px;
 }
 .poke_info span{
+    margin: 30px 30px;
+    font-size: 20px;
+    line-height: 34px;
+    font-family: 'Raleway', sans-serif;
+}
+.poke_info div{
     margin: 30px 30px;
     font-size: 20px;
     line-height: 34px;
