@@ -3,10 +3,22 @@ $(document).ready(function(){
     var pokemonNAME, pokePHOTOurl, pokeTYPE, i, j;
     var pokeAPI = "http://pokeapi.co/api/v2/pokemon/";
     
-  
+    $.ajaxSetup({
+            error: function(x, e) {
+
+                if (x.status == 404) {
+                    $('.error_sign').css('display', 'block');
+                } 
+                 else {
+                    alert('Unknow Error.\n' + x.responseText);
+                }
+            }
+        });
+
     //searching pokemon by user search
     $('#searchBtn').on('click', function(){
         
+        $('.error_sign').css('display', 'none');
         $('tbody tr').empty();
        
         var searchPoke = $('#pokeSearch').val();
@@ -51,6 +63,8 @@ $(document).ready(function(){
       }
         });
         
+    
+
     });
     
      

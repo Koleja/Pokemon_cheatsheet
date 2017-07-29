@@ -32,9 +32,24 @@ h1{
     text-align: center;
     vertical-align: middle;
 }
+.error_sign{
+    background: url('image/error.png') center center no-repeat;
+    background-size: contain;
+    display: none;
+    width: 150px;
+    height: 150px;
+    vertical-align: middle;
+    position: absolute;
+    left: 50vw;
+    top: 70px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    opacity: 0.95;
+}
 #pokeSearch{
     width: 100px;
     height: 30px;
+    cursor: pointer;
 }
 .window{
     width: 485px;
@@ -79,6 +94,7 @@ table th + th {
 .pokemon_name{
     text-align: center;
     margin: 20px;
+    cursor: pointer;
 }
 .pokemon_hp{
     font-size: 20px;
