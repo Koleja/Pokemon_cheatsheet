@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Pokemons Cheat Sheat</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link href="img/favicon.ico" rel="shortcut icon">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="img/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" rel="stylesheet">
+        <link href="css/styles.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="l-app">
+            <header class="l-header container-fluid">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="l-header_logo col-6">
+                        <img src="../img/poke-logo.png" alt="Pokemons logo">
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </header>
+            <section class="l-hero container-fluid">
+                <div class="l-hero__content container">
+                    <h1 class="l-hero__title row justify-content-center">Click on Pokemon's name for more information</h1>
+                    <form class="c-form row align-items-center" action="">
+                        <div class="col-2"></div>
+                        <label class="c-form__label col-2" for="pokeName">Search for:</label>
+                        <input class="c-form__input col-4" type="text" id="pokeName">
+                        <button class="c-form__button col-2" id="searchBtn">Search!</button>
+                        <div class="col-2"></div>
+                    </form>
+                </div>
+                <div class="l-hero__result container">
+                    <div class="row">
+                        <div class="col-2 col-md-1"></div>
+                        <div class="l-hero__wrapper col-8 col-md-10">
+                            <table class="c-table table table-hover" id="table1">
+                                <thead>
+                                    <tr id="row1">
+                                        <th>Pokemon's name</th>
+                                        <th>Pokemon's photo</th>
+                                        <th>Pokemon's HP</th>
+                                        <th>Pokemon's type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="2">
+                                        <td class="pokemon_name"></td>
+                                        <td class="pokemon_photo">
+                                            <img src="" alt="pokemon">
+                                        </td>
+                                        <td class="pokemon_point"></td>
+                                        <td class="pokemon_type"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-2 col-md-1"></div>
+                    </div>
+                </div>
+            </section>
+            <header class="l-header"></header>
+            <footer class="l-footer"></footer>
+        </div>
+    </body>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/main.min.js"></script>
+</html>

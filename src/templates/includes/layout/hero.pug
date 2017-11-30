@@ -1,0 +1,27 @@
+section.l-hero.container-fluid
+    .l-hero__content.container
+        h1.l-hero__title.row.justify-content-center Click on Pokemon's name for more information
+        form.c-form.row(action="").align-items-center
+            .col-2
+            label.c-form__label.col-2(for="pokeName") Search for:
+            input.c-form__input.col-4(type="text", id="pokeName")
+            button.c-form__button.col-2(id="searchBtn") Search!
+            .col-2
+    .l-hero__result.container
+        .row
+            .col-2.col-md-1
+            .l-hero__wrapper.col-8.col-md-10
+                table#table1.c-table.table.table-hover
+                    thead
+                        tr#row1
+                            th Pokemon's name
+                            th Pokemon's photo
+                            th Pokemon's HP
+                            th Pokemon's type
+                    tbody
+                        tr#2
+                            td.pokemon_name
+                            td.pokemon_photo: img(src="", alt="pokemon")
+                            td.pokemon_point
+                            td.pokemon_type
+            .col-2.col-md-1

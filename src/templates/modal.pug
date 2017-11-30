@@ -1,0 +1,20 @@
+include includes/mixins/modal.pug
+
+doctype html
+html(lang='pl')
+	
+	//- head
+	include includes/global/head.pug
+
+	body
+		.l-app
+			include includes/layout/header.pug
+
+			.l-main
+				+modal("modal--test", "display: block")
+					p Hello modal
+
+			include includes/layout/footer.pug
+			
+	//- foot
+	include includes/global/foot.pug
