@@ -241,6 +241,11 @@ fieldset {
 /*========================================================================== */
 .l-hero {
     display: block;
+    /* &__wrapper {
+        max-height: 270px;
+        height: auto;
+        overflow-y: scroll;
+    } */
 }
 
 .l-hero__content {
@@ -252,10 +257,23 @@ fieldset {
     font-size: 36px;
 }
 
-.l-hero__wrapper {
-    max-height: 270px;
-    height: auto;
-    overflow-y: scroll;
+.l-hero__result {
+    padding: 0 0 50px 0;
+}
+
+.l-description {
+    /* display: none; */
+    padding: 0 0 50px 0;
+}
+
+.l-description__exit {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.l-description__title {
+    text-align: center;
+    font-size: 20px;
 }
 
 /* ==========================================================================
@@ -345,6 +363,9 @@ fieldset {
 
 .c-form__label {
     text-align: right;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
 }
 
 .c-form__button {
@@ -352,6 +373,45 @@ fieldset {
 }
 
 /*========================================================================== */
+.c-table thead, .c-table tbody, .c-table tr, .c-table td, .c-table th {
+    display: block;
+}
+
+.c-table thead tr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.c-table thead tr th {
+    float: left;
+    width: 25%;
+}
+
+.c-table tbody {
+    max-height: 230px;
+    height: auto;
+    overflow-y: auto;
+}
+
+.c-table tbody tr {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.c-table tbody tr.dynamic {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.c-table tbody tr td {
+    float: left;
+    width: 25%;
+}
+
 /* ==========================================================================
    Modals
    ========================================================================== */

@@ -21,11 +21,23 @@
         font-size: 36px;
     }
     &__result {
-
+        padding: 0 0 50px 0;
     }
-    &__wrapper {
+    /* &__wrapper {
         max-height: 270px;
         height: auto;
         overflow-y: scroll;
+    } */
+}
+.l-description {
+    /* display: none; */
+    padding: 0 0 50px 0;
+
+    &__exit {
+        justify-content: flex-end;
+    }
+    &__title {
+        text-align: center;
+        font-size: 20px;
     }
 }

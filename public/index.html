@@ -23,20 +23,24 @@
             </header>
             <section class="l-hero container-fluid">
                 <div class="l-hero__content container">
-                    <h1 class="l-hero__title row justify-content-center">Click on Pokemon's name for more information</h1>
-                    <form class="c-form row align-items-center" action="">
+                    <h1 class="l-hero__title row justify-content-center">Search for your favourite pokemon</h1>
+                    <div class="row">
                         <div class="col-2"></div>
-                        <label class="c-form__label col-2" for="pokeName">Search for:</label>
-                        <input class="c-form__input col-4" type="text" id="pokeName">
-                        <button class="c-form__button col-2" id="searchBtn">Search!</button>
+                        <form class="c-form col-8 align-items-center" action="">
+                            <div class="form-row">
+                                <label class="c-form__label col-3" for="pokeName">Search for:</label>
+                                <input class="c-form__input col-6 form-control" type="text" id="pokeName">
+                                <button class="c-form__button col-2 btn btn-primary" type="button" id="searchBtn">Search!</button>
+                            </div>
+                        </form>
                         <div class="col-2"></div>
-                    </form>
+                    </div>
                 </div>
                 <div class="l-hero__result container">
                     <div class="row">
                         <div class="col-2 col-md-1"></div>
                         <div class="l-hero__wrapper col-8 col-md-10">
-                            <table class="c-table table table-hover" id="table1">
+                            <table class="c-table table table-hover table-fixed" id="table1">
                                 <thead>
                                     <tr id="row1">
                                         <th>Pokemon's name</th>
@@ -46,7 +50,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr id="2">
+                                    <tr class="c-table__row" id="2">
                                         <td class="pokemon_name"></td>
                                         <td class="pokemon_photo">
                                             <img src="" alt="pokemon">
@@ -61,7 +65,56 @@
                     </div>
                 </div>
             </section>
-            <header class="l-header"></header>
+            <section class="l-description container-fluid">
+                <div class="container">
+                    <div class="row l-description__exit">
+                        <button class="close" type="button" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="row l-description__wrapper">
+                        <div class="col-2 col-md-1"></div>
+                        <div class="col-8 col-md-10 bg-info">
+                            <h2 class="l-description__title">Pokemon's info</h2>
+                            <div class="l-description__table c-poke row">
+                                <div class="col-3 c-poke__photo">
+                                    <img class="js-img" src="" alt="">
+                                    <p class="js-point"> </p>
+                                </div>
+                                <div class="col-9 c-poke__info">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="js-name"></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 c-poke__data">
+                                            <p>type:
+                                                <span class="js-type"></span>
+                                            </p>
+                                            <p>speed:
+                                                <span class="js-speed"></span>
+                                            </p>
+                                            <p>defense:
+                                                <span class="js-defense"></span>
+                                            </p>
+                                            <p>attack:
+                                                <span class="js-attack"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 c-poke__desc">
+                                            <p class="js-description">trolololo dkcjdisuf efrj dfuhed fcas duausfhudif jdancajkd</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-md-1"></div>
+                    </div>
+                </div>
+            </section>
             <footer class="l-footer"></footer>
         </div>
     </body>

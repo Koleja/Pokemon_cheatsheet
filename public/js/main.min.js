@@ -3,17 +3,14 @@ var POKEMON = POKEMON || {};
 
 POKEMON.init = function () {
     $.browserDetection(true);
-    POKEMON.api.init();
+    POKEMON.searched.init();
+    POKEMON.chosen.init();
 };
-POKEMON.api = {
+POKEMON.searched = {
     init: function () {
-
 
         var pokeAPI, searchedPokeNAME; 
         var pokeNAME, pokeID, pokeTYPE, pokeSTAT, pokeHP, pokePHOTO; //results of searched data in api
-
-
-        
         
         $('#searchBtn').on('click', function (event) {
 
@@ -57,7 +54,7 @@ POKEMON.api = {
 
                     //cloning row, changing it's id for individual for each pokemon and adding it at the end of table
                     row = $('#2').clone();
-                    var newRow = row.attr('id', [i]);
+                    var newRow = row.attr('id', [i]).addClass('dynamic');
                     $('tbody:last-child').append(row);
                     
 
@@ -82,14 +79,7 @@ POKEMON.api = {
                                     }
                                 }
                             }
-
                         });
-                        
-
-
-
-
-
                     });
                 }
                 $('#2').css('display', 'none');
@@ -119,6 +109,74 @@ POKEMON.api = {
 
     }
 };
+
+POKEMON.chosen = {
+    init: function () {
+
+        var pokeNAME, 
+            pokeID,
+            pokeAPI,
+            pokeAPI2,
+            pokeTYPE,
+            pokePOINT,
+            pokePHOTO,
+            pokeDESCRIPTION,
+            pokeSTATS,
+            pokeDEFENSE,
+            pokeATTACK,
+            pokeSPEED;
+
+
+        $('table').on('click', 'tr', function () {
+
+            $('.l-description').css('display', 'block');
+
+            pokeNAME = $(this).find('.pokemon_name').text();
+            pokeTYPE = $(this).find('.pokemon_type').text();
+            pokePOINT = $(this).find('.pokemon_point').text();
+            pokePHOTO = $(this).find('img').attr('src');
+            pokeID = $(this).attr('id');
+
+            $('.js-name').text(pokeNAME);
+            $('.js-type').text(pokeTYPE);
+            $('.js-point').text(pokePOINT);
+            $('.js-img').attr('src', pokePHOTO);
+            
+            pokeAPI = 'https://pokeapi.co/api/v2/pokemon/' + pokeNAME;
+
+            $.getJSON(pokeAPI, function (data) {
+
+                for (var i = 0; i < data.stats.length; i++){
+                    
+                    pokeSTATS = data.stats[i];
+                            
+                    if ( pokeSTATS.stat.name === 'speed'){
+                        pokeSPEED = pokeSTATS.base_stat;
+                        $('.js-speed').text(pokeSPEED);
+                    }
+                    if ( pokeSTATS.stat.name === 'attack'){
+                        pokeATTACK = pokeSTATS.base_stat;
+                        $('.js-attack').text(pokeATTACK);
+                    }
+                    if ( pokeSTATS.stat.name === 'defense'){
+                        pokeDEFENSE = pokeSTATS.base_stat;
+                        $('.js-defense').text(pokeDEFENSE);
+                    }
+                }
+            });
+
+            pokeAPI2 = 'https://pokeapi.co/api/v2/ability/' + pokeID;
+
+            $.getJSON(pokeAPI2, function (data) {
+
+                pokeDESCRIPTION = data.effect_entries[0].effect;
+                $('.js-description').text(pokeDESCRIPTION);
+            });
+        });
+
+    }
+};
+
 
 $(document).ready(function () {
     POKEMON.init();    
