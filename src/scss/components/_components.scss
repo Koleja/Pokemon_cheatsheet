@@ -41,7 +41,7 @@
 /*========================================================================== */
 
 .c-table {
-	
+	font-size: 16px;
 
 	thead,tbody,tr,td,th{
 		display: block;
@@ -54,6 +54,8 @@
 			th {
 				float: left;
 				width: 25%;
+				font-size: 14px;
+				text-align: center;
 			}
 		}
 	}
@@ -73,8 +75,66 @@
 			td {
 				float: left;
 				width: 25%;
+				text-transform: capitalize;
+				text-align: center;
+				line-height: 6em;
+				img{
+					margin-left: auto;
+					margin-right: auto;
+				}
 			}
 		}
 		
+	}
+}
+
+/*========================================================================== */
+
+.c-poke {
+	font-size: 16px;
+	/* padding: 5px; */
+
+	&__photo {
+		padding-top: 30px;
+		
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		figcaption {
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+	&__name {
+		text-align: center;
+		text-transform: uppercase;
+		padding: 10px 0;
+		margin-left: 15px;
+		background-color: black;
+		color: white;
+		max-width: calc(100% - 15px);
+	}
+	&__data {
+		text-transform: capitalize;
+		display: inline-block;
+		width: calc(100%/3.5);
+		padding-bottom: 5px;
+		font-weight: bold;
+
+		&--type {
+			display: block;
+			margin-bottom: 10px;
+			padding-top: 10px;
+		}
+		span {
+			font-weight: normal;
+		}
+	}
+	&__desc {
+		padding-right: 20px;
+		padding-bottom: 20px;
+		text-align: justify; 
 	}
 }

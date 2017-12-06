@@ -236,6 +236,13 @@ fieldset {
 .l-app {
     width: 100vw;
     overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 /*========================================================================== */
@@ -259,10 +266,11 @@ fieldset {
 
 .l-hero__result {
     padding: 0 0 50px 0;
+    display: none;
 }
 
 .l-description {
-    /* display: none; */
+    display: none;
     padding: 0 0 50px 0;
 }
 
@@ -271,9 +279,16 @@ fieldset {
     justify-content: flex-end;
 }
 
+.l-description__exit button {
+    font-size: 35px;
+    width: 40px;
+    padding: 5px;
+}
+
 .l-description__title {
     text-align: center;
     font-size: 20px;
+    padding-bottom: 15px;
 }
 
 /* ==========================================================================
@@ -373,6 +388,10 @@ fieldset {
 }
 
 /*========================================================================== */
+.c-table {
+    font-size: 16px;
+}
+
 .c-table thead, .c-table tbody, .c-table tr, .c-table td, .c-table th {
     display: block;
 }
@@ -387,6 +406,8 @@ fieldset {
 .c-table thead tr th {
     float: left;
     width: 25%;
+    font-size: 14px;
+    text-align: center;
 }
 
 .c-table tbody {
@@ -410,6 +431,69 @@ fieldset {
 .c-table tbody tr td {
     float: left;
     width: 25%;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 6em;
+}
+
+.c-table tbody tr td img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*========================================================================== */
+.c-poke {
+    font-size: 16px;
+    /* padding: 5px; */
+}
+
+.c-poke__photo {
+    padding-top: 30px;
+}
+
+.c-poke__photo img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.c-poke__photo figcaption {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.c-poke__name {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-left: 15px;
+    background-color: black;
+    color: white;
+    max-width: calc(100% - 15px);
+}
+
+.c-poke__data {
+    text-transform: capitalize;
+    display: inline-block;
+    width: calc(100%/3.5);
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.c-poke__data--type {
+    display: block;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.c-poke__data span {
+    font-weight: normal;
+}
+
+.c-poke__desc {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
 }
 
 /* ==========================================================================

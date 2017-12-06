@@ -1,27 +1,27 @@
 section.l-description.container-fluid
-    .container 
+    .container
         .row.l-description__exit
             button(type="button", aria-label="Close").close
                 span(aria-hidden="true") &times;
         .row.l-description__wrapper
             .col-2.col-md-1
-            .col-8.col-md-10.bg-info
+            .col-8.col-md-10
                 h2.l-description__title Pokemon's info
-                .l-description__table.c-poke.row
-                    .col-3.c-poke__photo 
+                .l-description__table.c-poke.row.bg-light.border.border-light.rounded
+                    figure.col-3.c-poke.c-poke__photo 
                         img.js-img(src="", alt="")
-                        p.js-point 
-                    .col-9.c-poke__info
+                        figcaption.js-point 
+                    .col-9.c-poke.c-poke__info
                         .row
-                            .col-12
+                            .col-12.c-poke.c-poke__name
                                 p.js-name
                         .row
-                            .col-12.c-poke__data
-                                p type: #[span.js-type]
-                                p speed: #[span.js-speed]
-                                p defense: #[span.js-defense]
-                                p attack: #[span.js-attack]
+                            .col-12.c-poke.c-poke__data
+                                p.c-poke__data--type type: #[span.js-type]
+                                p.c-poke__data.c-poke__data--speed speed: #[span.js-speed]
+                                p.c-poke__data.c-poke__data--defense defense: #[span.js-defense]
+                                p.c-poke__data.c-poke__data--attack attack: #[span.js-attack]
                         .row
-                            .col-12.c-poke__desc
-                                p.js-description trolololo dkcjdisuf efrj dfuhed fcas duausfhudif jdancajkd
+                            .col-12.c-poke.c-poke__desc
+                                p.js-description 
             .col-2.col-md-1

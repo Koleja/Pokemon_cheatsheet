@@ -25,15 +25,15 @@
                 <div class="l-hero__content container">
                     <h1 class="l-hero__title row justify-content-center">Search for your favourite pokemon</h1>
                     <div class="row">
-                        <div class="col-2"></div>
-                        <form class="c-form col-8 align-items-center" action="">
+                        <div class="col-2 col-xs-0"></div>
+                        <form class="c-form col-8 col-xs-12 align-items-center" action="">
                             <div class="form-row">
                                 <label class="c-form__label col-3" for="pokeName">Search for:</label>
                                 <input class="c-form__input col-6 form-control" type="text" id="pokeName">
                                 <button class="c-form__button col-2 btn btn-primary" type="button" id="searchBtn">Search!</button>
                             </div>
                         </form>
-                        <div class="col-2"></div>
+                        <div class="col-2 col-xs-0"></div>
                     </div>
                 </div>
                 <div class="l-hero__result container">
@@ -41,7 +41,7 @@
                         <div class="col-2 col-md-1"></div>
                         <div class="l-hero__wrapper col-8 col-md-10">
                             <table class="c-table table table-hover table-fixed" id="table1">
-                                <thead>
+                                <thead class="thead-dark">
                                     <tr id="row1">
                                         <th>Pokemon's name</th>
                                         <th>Pokemon's photo</th>
@@ -53,7 +53,7 @@
                                     <tr class="c-table__row" id="2">
                                         <td class="pokemon_name"></td>
                                         <td class="pokemon_photo">
-                                            <img src="" alt="pokemon">
+                                            <img src="">
                                         </td>
                                         <td class="pokemon_point"></td>
                                         <td class="pokemon_type"></td>
@@ -74,38 +74,38 @@
                     </div>
                     <div class="row l-description__wrapper">
                         <div class="col-2 col-md-1"></div>
-                        <div class="col-8 col-md-10 bg-info">
+                        <div class="col-8 col-md-10">
                             <h2 class="l-description__title">Pokemon's info</h2>
-                            <div class="l-description__table c-poke row">
-                                <div class="col-3 c-poke__photo">
+                            <div class="l-description__table c-poke row bg-light border border-light rounded">
+                                <figure class="col-3 c-poke c-poke__photo">
                                     <img class="js-img" src="" alt="">
-                                    <p class="js-point"> </p>
-                                </div>
-                                <div class="col-9 c-poke__info">
+                                    <figcaption class="js-point"> </figcaption>
+                                </figure>
+                                <div class="col-9 c-poke c-poke__info">
                                     <div class="row">
-                                        <div class="col-12">
+                                        <div class="col-12 c-poke c-poke__name">
                                             <p class="js-name"></p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-12 c-poke__data">
-                                            <p>type:
+                                        <div class="col-12 c-poke c-poke__data">
+                                            <p class="c-poke__data--type">type:
                                                 <span class="js-type"></span>
                                             </p>
-                                            <p>speed:
+                                            <p class="c-poke__data c-poke__data--speed">speed:
                                                 <span class="js-speed"></span>
                                             </p>
-                                            <p>defense:
+                                            <p class="c-poke__data c-poke__data--defense">defense:
                                                 <span class="js-defense"></span>
                                             </p>
-                                            <p>attack:
+                                            <p class="c-poke__data c-poke__data--attack">attack:
                                                 <span class="js-attack"></span>
                                             </p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-12 c-poke__desc">
-                                            <p class="js-description">trolololo dkcjdisuf efrj dfuhed fcas duausfhudif jdancajkd</p>
+                                        <div class="col-12 c-poke c-poke__desc">
+                                            <p class="js-description"> </p>
                                         </div>
                                     </div>
                                 </div>

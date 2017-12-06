@@ -4,7 +4,11 @@
 
 .l-app {
 	width: 100vw;
-	overflow: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center
 }
 
 /*========================================================================== */
@@ -22,6 +26,7 @@
     }
     &__result {
         padding: 0 0 50px 0;
+        display: none;
     }
     /* &__wrapper {
         max-height: 270px;
@@ -30,14 +35,21 @@
     } */
 }
 .l-description {
-    /* display: none; */
+    display: none;
     padding: 0 0 50px 0;
 
     &__exit {
         justify-content: flex-end;
+
+        button {
+            font-size: 35px;
+            width: 40px;
+            padding: 5px;
+        }
     }
     &__title {
         text-align: center;
         font-size: 20px;
+        padding-bottom: 15px;
     }
 }

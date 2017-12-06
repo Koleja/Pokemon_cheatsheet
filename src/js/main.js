@@ -5,7 +5,9 @@ POKEMON.init = function () {
     $.browserDetection(true);
     POKEMON.searched.init();
     POKEMON.chosen.init();
+    POKEMON.exit.init();
 };
+
 POKEMON.searched = {
     init: function () {
 
@@ -16,6 +18,9 @@ POKEMON.searched = {
 
             event.preventDefault();
 
+            $('.l-description').css('display', 'none');
+            $('.l-hero__result').css('display', 'block');
+            $('.l-app').css('height', 'auto');
             $('#2').css('display', 'table-row');
             $('#2').siblings().remove();
 
@@ -131,6 +136,11 @@ POKEMON.chosen = {
 
             $('.l-description').css('display', 'block');
 
+            var descriptionPlace = $('.l-description').offset().top;
+            $('html, body').animate({
+                scrollTop: descriptionPlace
+            }, 1000);
+
             pokeNAME = $(this).find('.pokemon_name').text();
             pokeTYPE = $(this).find('.pokemon_type').text();
             pokePOINT = $(this).find('.pokemon_point').text();
@@ -177,6 +187,23 @@ POKEMON.chosen = {
     }
 };
 
+POKEMON.exit = {
+    init: function () {
+
+        $('.close').on('click', function () {
+
+            var top = $('.l-app').offset().top;
+
+            
+            
+            $('.l-description').css('display', 'none'); 
+            $('html, body').animate({
+                scrollTop: top,
+            }, 1000);
+                  
+        });
+    }
+};
 
 $(document).ready(function () {
     POKEMON.init();    
