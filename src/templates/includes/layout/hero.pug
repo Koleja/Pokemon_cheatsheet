@@ -3,11 +3,11 @@ section.l-hero.container-fluid
         h1.l-hero__title.row.justify-content-center Search for your favourite pokemon
         .row
             .col-md-2.col-sm-1
-            form(action="").c-form.col-md-8.col-sm-10.align-items-center
+            form(action="", onsubmit="return false").c-form.col-md-8.col-sm-10.align-items-center
                 .c-form__wrapper.form-row
                     label.c-form__label.col-3(for="pokeName") Search for:
                     input.c-form__input.col-6.form-control(type="text", id="pokeName")
-                    button(type="button").c-form__button.col-2.btn.btn-primary(id="searchBtn") Search!
+                    button.c-form__button.col-2.btn.btn-primary(id="searchBtn") Search!
             .col-md-2.col-sm-1
     .l-hero__result.container
         .row
