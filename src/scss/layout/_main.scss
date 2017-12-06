@@ -53,3 +53,18 @@
         padding-bottom: 15px;
     }
 }
+
+@media (max-width: 575px) {
+    .l-hero {
+
+        &__title {
+            font-size: 32px;
+        }
+        &__result {
+            padding-bottom: 25px;
+        }
+    }
+    .l-description {
+        padding: 0;
+    }
+}

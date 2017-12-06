@@ -24,7 +24,8 @@ POKEMON.searched = {
             $('#2').css('display', 'table-row');
             $('#2').siblings().remove();
 
-            searchedPokeNAME = $('#pokeName').val();
+            searchedPokeNAME = $('#pokeName').val().toLowerCase();
+            console.log(searchedPokeNAME);
             pokeAPI = 'https://pokeapi.co/api/v2/pokemon/' + searchedPokeNAME;
 
             var row;

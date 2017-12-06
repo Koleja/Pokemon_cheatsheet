@@ -38,6 +38,29 @@
 	}
 }
 
+@media(max-width: 470px) {
+	.c-form {
+
+		&__wrapper {
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__label {
+			max-width: 80%;
+			text-align: center;
+		}
+		&__input {
+			max-width: 80%;
+			align-self: center;
+			margin: 20px 0;
+		}
+		&__button {
+			max-width: 150px;
+			align-self: center;
+		}
+	}
+}
+
 /*========================================================================== */
 
 .c-table {
@@ -88,6 +111,31 @@
 	}
 }
 
+@media(max-width: 390px) {
+	.c-table {
+		font-size: 10px;
+
+		thead {
+
+			tr {
+
+				th {
+					font-size: 10px;
+				}
+			}
+		}
+		tbody {
+			max-height: 160px;
+
+			tr {
+
+				td {
+					padding: 2px;
+				}
+			}
+		}
+	}
+}
 /*========================================================================== */
 
 .c-poke {
@@ -119,7 +167,7 @@
 	&__data {
 		text-transform: capitalize;
 		display: inline-block;
-		width: calc(100%/3.5);
+		width: calc(100%/3.1);
 		padding-bottom: 5px;
 		font-weight: bold;
 
@@ -136,5 +184,44 @@
 		padding-right: 20px;
 		padding-bottom: 20px;
 		text-align: justify; 
+	}
+}
+@media (max-width: 490px) {
+	.c-poke {
+
+		&__data {
+			width: calc(100%/3);
+		}
+	}
+}
+@media (max-width: 453px) {
+	.c-poke {
+
+		&__photo {
+			padding-right: 5px;
+		}
+		&__info {
+			padding-left: 5px;
+		}
+		&__data {
+			width: 100%;
+
+			&--speed {
+				display: block;
+			}
+			&--defense {
+				display: block;
+			}
+			&--attack {
+				display: block;
+			}
+		}
+		&__desc {
+
+			p {
+				width: 90vw;
+				margin-left: -32vw;	
+			}
+		}
 	}
 }
